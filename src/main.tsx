@@ -3,12 +3,12 @@ import { createRoot } from "react-dom/client";
 import App from "./App.tsx";
 import "./index.css";
 import { BrowserRouter } from "react-router-dom";
-import { SideNav } from "./components/common/Nav/SideNav/index.tsx";
+import { Nav } from "./components/common/Nav";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <BrowserRouter>
-      <SideNav app={<App />} />
+      <Nav app={<App />} />
     </BrowserRouter>
   </StrictMode>
 );

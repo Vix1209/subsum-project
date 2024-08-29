@@ -1,7 +1,12 @@
-import React from "react";
+import { AirtimeForm } from "./component/AirtimeForm";
 
 const AirtimeToCash = () => {
-  return <div>AirtimeToCash</div>;
+  return (
+    <div className="">
+    
+      <AirtimeForm />
+    </div>
+  );
 };
 
 export default AirtimeToCash;

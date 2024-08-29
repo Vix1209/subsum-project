@@ -59,6 +59,17 @@
   }
 }
 
+html ::-webkit-scrollbar {
+  /* width: -2px; */
+  display: none;
+}
+html ::-webkit-scrollbar-track {
+  background-color: #d3d9e5;
+}
+html ::-webkit-scrollbar-thumb {
+  background-color: #02579e;
+}
+
 @layer base {
   * {
     @apply border-border;

@@ -13,23 +13,22 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
 
-        <Route path="dashboard" element={<Dashboard />}>
-          <Route path="account" element={<Accounts />} />
-        </Route>
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/dashboard/account" element={<Accounts />} />
 
-        <Route path="buy-airtime" element={<p>Buy Airtime</p>} />
+        <Route path="/buy-airtime" element={<p>Buy Airtime</p>} />
 
-        <Route path="buy-data" element={<p>Buy Data</p>} />
+        <Route path="/buy-data" element={<p>Buy Data</p>} />
 
-        <Route path="subscription" element={<p>Subscribe</p>} />
+        <Route path="/subscription" element={<p>Subscribe</p>} />
 
-        <Route path="bill-payment" element={<p>Nepa bill Payment</p>} />
+        <Route path="/bill-payment" element={<p>Nepa bill Payment</p>} />
 
-        <Route path="airtime-to-cash" element={<AirtimeToCash />} />
+        <Route path="/airtime-to-cash" element={<AirtimeToCash />} />
 
-        <Route path="support" element={<Support />} />
+        <Route path="/support" element={<Support />} />
 
-        <Route path="transaction-history" element={<History />} />
+        <Route path="/transaction-history" element={<History />} />
 
         <Route path="*" element={<p>Route Not Found</p>} />
       </Routes>

@@ -1,5 +1,3 @@
-"use client";
-
 import { z } from "zod";
 
 const LoginFormSchema = z.object({

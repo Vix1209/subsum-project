@@ -18,7 +18,7 @@ import { Switch } from "@/components/ui/switch";
 import { Input } from "@/components/ui/input";
 import LoginFormSchema from "@/schemas/loginForm_zod";
 
-export function Home() {
+export function HomePage() {
   const form = useForm<z.infer<typeof LoginFormSchema>>({
     resolver: zodResolver(LoginFormSchema),
     defaultValues: {

@@ -1,7 +1,5 @@
 import React from "react";
 
-import { Home, Package, ShoppingCart, Users } from "lucide-react";
-
 import {
   Accordion,
   AccordionContent,
@@ -9,6 +7,15 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { useNavigate } from "react-router-dom";
+import { Users } from "lucide-react";
+import Dash from "@/assets/icons/SideNav/dashIcon.png";
+import Call from "@/assets/icons/SideNav/callIcon.png";
+import Wifi from "@/assets/icons/SideNav/wifiIcon.png";
+import TV from "@/assets/icons/SideNav/TViCON.png";
+import Charge from "@/assets/icons/SideNav/charge.png";
+import Recharge from "@/assets/icons/SideNav/recharge.png";
+import Support from "@/assets/icons/SideNav/support.png";
+import Invoice from "@/assets/icons/SideNav/invoice.png";
 
 const SideNav = () => {
   const [selectedItem, setSelectedItem] = React.useState("Dashboard");
@@ -20,26 +27,21 @@ const SideNav = () => {
         <nav className="grid items-start px-2 text-sm font-medium lg:px-4">
           <div
             className={`${
-              selectedItem === "Dashboard" ? " bg-[#F0F2F5] rounded-[12px]" : ""
+              selectedItem === "Dashboard"
+                ? " bg-primary text-white rounded-[12px]"
+                : "text-[#6882B6]"
             } transition duration-300 flex items-center w-full gap-3 rounded-lg px-3 py-4 cursor-pointer`}
-            onClick={() => (
-              navigate("/dashboard"), setSelectedItem("Dashboard")
-            )}
+            onClick={() => (navigate("/"), setSelectedItem("Dashboard"))}
           >
-            <Home className="h-4 w-4" />
+            <img className="h-4 w-4 bg-gray-400" src={Dash} alt="" />
             Dashboard
           </div>
 
           <Accordion type="single" collapsible className="w-full">
             <AccordionItem value="item-1">
               <AccordionTrigger>
-                <div className="flex items-center gap-3 rounded-lg px-3 py-2 transition-all cursor-pointer">
-                  <img
-                    src={"/icon/contentIcon.svg"}
-                    height={16}
-                    width={16}
-                    alt={""}
-                  />
+                <div className="flex items-center gap-3 text-[#6882B6] rounded-lg px-3 py-2 transition-all cursor-pointer">
+                  <img src={Call} height={16} width={16} alt={""} />
                   Buy Airtime
                 </div>
               </AccordionTrigger>
@@ -47,14 +49,14 @@ const SideNav = () => {
                 <div
                   className={`${
                     selectedItem === "BuyAirtime"
-                      ? " bg-[#F0F2F5] rounded-[12px]"
-                      : ""
+                      ? " bg-primary text-white rounded-[12px]"
+                      : "text-[#6882B6] "
                   } flex items-center gap-3 rounded-lg px-3 py-2 text-xs lg:text-sm ms-5 transition-all hover:text-primary cursor-pointer`}
                   onClick={() => (
                     navigate("/buy-airtime"), setSelectedItem("BuyAirtime")
                   )}
                 >
-                  <Users className="h-4 w-4" />
+                  {/* <Users className="h-4 w-4" /> */}
                   Purchase MTN Airtime
                 </div>
               </AccordionContent>
@@ -62,13 +64,8 @@ const SideNav = () => {
 
             <AccordionItem value="item-2">
               <AccordionTrigger>
-                <div className="flex items-center gap-3 rounded-lg px-3 py-2 transition-all cursor-pointer">
-                  <img
-                    src={"/icon/contentIcon.svg"}
-                    height={16}
-                    width={16}
-                    alt={""}
-                  />
+                <div className="flex items-center text-[#6882B6] gap-3 rounded-lg px-3 py-2 transition-all cursor-pointer">
+                  <img src={Wifi} height={16} width={16} alt={""} />
                   Buy Data
                 </div>
               </AccordionTrigger>
@@ -76,8 +73,8 @@ const SideNav = () => {
                 <div
                   className={`${
                     selectedItem === "BuyData"
-                      ? " bg-[#F0F2F5] rounded-[12px]"
-                      : ""
+                      ? " bg-primary text-white rounded-[12px]"
+                      : "text-[#6882B6]"
                   } flex items-center gap-3 rounded-lg px-3 py-2 text-xs lg:text-sm ms-5 transition-all hover:text-primary cursor-pointer`}
                   onClick={() => (
                     navigate("/buy-data"), setSelectedItem("BuyData")
@@ -91,13 +88,8 @@ const SideNav = () => {
 
             <AccordionItem value="item-3">
               <AccordionTrigger>
-                <div className="flex items-center gap-3 rounded-lg px-3 py-2 transition-all cursor-pointer">
-                  <img
-                    src={"/icon/contentIcon.svg"}
-                    height={16}
-                    width={16}
-                    alt={""}
-                  />
+                <div className="flex items-center gap-3 rounded-lg text-[#6882B6] px-3 py-2 transition-all cursor-pointer">
+                  <img src={TV} height={16} width={16} alt={""} />
                   TV Subscription
                 </div>
               </AccordionTrigger>
@@ -105,8 +97,8 @@ const SideNav = () => {
                 <div
                   className={`${
                     selectedItem === "Subscribe"
-                      ? " bg-[#F0F2F5] rounded-[12px]"
-                      : ""
+                      ? " bg-primary text-white rounded-[12px]"
+                      : "text-[#6882B6]"
                   } flex items-center gap-3 rounded-lg px-3 py-2 text-xs lg:text-sm ms-5 transition-all hover:text-primary cursor-pointer`}
                   onClick={() => (
                     navigate("/subscription"), setSelectedItem("Subscribe")
@@ -120,13 +112,8 @@ const SideNav = () => {
 
             <AccordionItem value="item-4">
               <AccordionTrigger>
-                <div className="flex items-center gap-3 rounded-lg px-3 py-2 transition-all cursor-pointer">
-                  <img
-                    src={"/icon/contentIcon.svg"}
-                    height={16}
-                    width={16}
-                    alt={""}
-                  />
+                <div className="flex items-center gap-3 rounded-lg px-3 text-[#6882B6] py-2 transition-all cursor-pointer">
+                  <img src={Charge} height={16} width={16} alt={""} />
                   Pay Electric Bill
                 </div>
               </AccordionTrigger>
@@ -134,8 +121,8 @@ const SideNav = () => {
                 <div
                   className={`${
                     selectedItem === "NEPA-Bill"
-                      ? " bg-[#F0F2F5] rounded-[12px]"
-                      : ""
+                      ? " bg-primary text-white rounded-[12px]"
+                      : "text-[#6882B6]"
                   } flex items-center gap-3 rounded-lg px-3 py-2 text-xs lg:text-sm ms-5 transition-all hover:text-primary cursor-pointer`}
                   onClick={() => (
                     navigate("/bill-payment"), setSelectedItem("NEPA-Bill")
@@ -151,39 +138,43 @@ const SideNav = () => {
           <div
             className={`${
               selectedItem === "airtime-to-cash"
-                ? " bg-[#F0F2F5] rounded-[12px]"
-                : ""
+                ? " bg-primary text-white rounded-[12px]"
+                : "text-[#6882B6]"
             } transition duration-300 flex items-center w-full gap-3 rounded-lg px-3 py-4 cursor-pointer`}
             onClick={() => (
               navigate("/airtime-to-cash"), setSelectedItem("airtime-to-cash")
             )}
           >
-            <Home className="h-4 w-4" />
+            {/* <Home  */}
+            <img className="h-4 w-4" src={Recharge} alt="" />
             Airtime To Cash
           </div>
 
           <div
             className={`${
               selectedItem === "TransactionHistory"
-                ? " bg-[#F0F2F5] rounded-[12px]"
-                : ""
+                ? " bg-primary text-white rounded-[12px]"
+                : "text-[#6882B6]"
             } transition duration-300 flex items-center w-full gap-3 rounded-lg px-3 py-4 cursor-pointer`}
             onClick={() => (
               navigate("/transaction-history"),
               setSelectedItem("TransactionHistory")
             )}
           >
-            <ShoppingCart className="h-4 w-4" />
+            {/* <ShoppingCart className="h-4 w-4" /> */}
+            <img className="h-4 w-4" src={Invoice} alt="" />
             Transaction History
           </div>
 
           <div
             className={`${
-              selectedItem === "Support" ? " bg-[#F0F2F5] rounded-[12px]" : ""
+              selectedItem === "Support"
+                ? " bg-primary text-white rounded-[12px]"
+                : "text-[#6882B6]"
             } transition duration-300 flex items-center w-full gap-3 rounded-lg px-3 py-4 cursor-pointer`}
             onClick={() => (navigate("/support"), setSelectedItem("Support"))}
           >
-            <Package className="h-4 w-4" />
+            <img className="h-4 w-4" src={Support} alt="" />
             Help & Support
           </div>
         </nav>

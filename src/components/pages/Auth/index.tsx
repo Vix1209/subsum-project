@@ -10,7 +10,7 @@ import {
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
-import HomePic from "@/assets/images/Home/Home.png";
+import HomePic from "@/assets/images/Home/Login.png";
 import Back from "@/assets/icons/Back.svg";
 import GoogleLogo from "@/assets/icons/googleLogo.png";
 import { Separator } from "@/components/ui/separator";
@@ -18,7 +18,7 @@ import { Switch } from "@/components/ui/switch";
 import { Input } from "@/components/ui/input";
 import LoginFormSchema from "@/schemas/loginForm_zod";
 
-export function HomePage() {
+export function AuthPage() {
   const form = useForm<z.infer<typeof LoginFormSchema>>({
     resolver: zodResolver(LoginFormSchema),
     defaultValues: {
@@ -43,10 +43,10 @@ export function HomePage() {
         </div>
         <div className="w-full lg:p-5 pt-5 h-full bg-[#F7F9FD]">
           <div className="flex justify-between mx-5 lg:mx-10 ">
-            <div className="flex gap-x-2 items-center">
+            <a href="/" className="flex gap-x-2 items-center">
               <img src={Back} width={7.7} height={13.4} alt={""} />
               <p className="font-medium text-base">Back</p>
-            </div>
+            </a>
             <Button>Sign Up</Button>
           </div>
 

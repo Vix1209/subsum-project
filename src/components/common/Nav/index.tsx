@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 import { useLocation } from "react-router-dom";
-import { HomePage } from "@/components/pages/Home";
+import { AuthPage } from "@/components/pages/Auth";
 import TopNav from "./TopNav";
 import SideNav from "./SideNav";
 import Logo from "@/assets/icons/subsumLogo.png";
@@ -11,11 +11,11 @@ interface HomeProp {
 
 export function Nav({ app }: HomeProp) {
   const locate = useLocation();
-  const homePage = locate.pathname === "/";
+  const loginPage = locate.pathname === "/auth/login";
   return (
     <>
-      {homePage ? (
-        <HomePage />
+      {loginPage ? (
+        <AuthPage />
       ) : (
         <div className="grid min-h-screen w-full md:grid-cols-[220px_1fr] lg:grid-cols-[280px_1fr]">
           <div className="hidden bg-muted/40 md:block">

@@ -1,11 +1,20 @@
 import { AccountFormLayout } from "./component/AccountFormLayout";
+import PhotoGlobe from "@/assets/images/Dashboard/account/photoGlobe.png";
+import LittleCamera from "@/assets/images/Dashboard/account/littleCamera.png";
 
 const Accounts = () => {
   return (
     <div>
       <div className="grid xl:grid-cols-2 gap-5 ">
         <div className=" flex flex-col gap-y-5">
-          <div className="p-5 rounded-3xl border">Upload Image</div>
+          <div className="p-5 rounded-3xl border text-center">
+            <div>
+              <img className="mx-auto" src={PhotoGlobe} alt="" />
+            </div>
+            <p className="mt-5 flex justify-center gap-x-2">
+              <img className="" src={LittleCamera} alt="" /> Upload Image
+            </p>
+          </div>
           <div className="p-5 rounded-3xl  grid grid-cols-2 border">
             <div className="flex gap-y-2 flex-col text-start text-sm lg:text-base">
               <span>Name</span>

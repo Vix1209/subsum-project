@@ -40,7 +40,7 @@ export function AirtimeForm() {
       </div>
       <Card className="w-full">
         <CardHeader>
-          <CardTitle>Airtime to Cash</CardTitle>
+          <CardTitle className="text-center mb-3">Airtime to Cash</CardTitle>
         </CardHeader>
         <CardContent>
           <Form {...form}>
@@ -127,7 +127,7 @@ export function AirtimeForm() {
                 </div>
                 <div className="w-full mt-5">
                   <Button
-                    className="bg-pri-1 w-full h-[44px] rounded px-4 gap-2"
+                    className="bg-primary w-full h-[44px] rounded px-4 gap-2"
                     type="submit"
                   >
                     Send message

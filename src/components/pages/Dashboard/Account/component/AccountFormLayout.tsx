@@ -28,7 +28,7 @@ export function AccountFormLayout() {
     console.log(formValues);
   };
   return (
-    <Tabs defaultValue="ChangePassword" className="max-w-[400px]">
+    <Tabs defaultValue="ChangePassword" className="max-w-full">
       <TabsList className="grid w-full rounded-3xl grid-cols-2">
         <TabsTrigger className="rounded-3xl" value="ChangePassword">
           Change Password
@@ -93,7 +93,7 @@ export function AccountFormLayout() {
             />
             <div className="w-full">
               <Button
-                className="bg-blue-400 w-full h-[44px] rounded-3xl px-4 gap-2"
+                className="bg-blue-400 mt-5 w-full h-[44px] rounded-3xl px-4 gap-2"
                 type="submit"
               >
                 Submit
@@ -158,7 +158,7 @@ export function AccountFormLayout() {
             />
             <div className="w-full">
               <Button
-                className="bg-blue-400 w-full h-[44px] rounded-3xl px-4 gap-2"
+                className="bg-blue-400 mt-5 w-full h-[44px] rounded-3xl px-4 gap-2"
                 type="submit"
               >
                 Submit
